@@ -112,3 +112,22 @@ html, body {
   padding: 20px;
   text-align: center;
 }
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #aaa;
+  border: 5px solid #333;
+}
+
+.container {
+  width: 100%;
+  flex: 1; /* Pushes the background all the way to the bottom border */
+  background-color: #999;
+  padding: 20px;
+  text-align: center;
+}
