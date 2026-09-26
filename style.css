@@ -1,1 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 0px;
+  background: #aaa;
+  border: 5px solid #333;
+}
 
+h1 {
+  color: rgb(0, 0, 0);
+}
+
+.navbar {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* Additional CSS for navigation links */
+.nav-links {
+    display: flex;
+    gap: 60px;
+}
+
+/* Additional CSS for navigation links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #444;
+    padding: 10px 25px;
+    border-radius: 25px; 
+}
+
+/* Additional CSS for hover effect on navigation links */
+.nav-links a:hover {
+    background-color: #666
+}
+
+
+
+.image-of-me img {
+    width: 20%;
+    height: 20%;
+
+    border-radius: 50%;
+    border: 5px solid #8a8a8a;
+    margin-bottom: 20px;
+}
