@@ -1,186 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-body {
-font-family: 'Google Sans Variable', sans-serif;
-text-align: center;
-  padding: 0px;
-  background: #aaa;
-  border: 5px solid #333;
-}
-
-h1 {
-  color: rgb(0, 0, 0);
-}
-
-.navbar {
-    background-color: #222;
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-}
-
-/* Additional CSS for navigation links */
-.nav-links {
-    display: flex;
-    gap: 60px;
-}
-
-/* Additional CSS for navigation links */
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    background-color: #444;
-    padding: 10px 25px;
-    border-radius: 25px; 
-}
-
-/* Additional CSS for hover effect on navigation links */
-.nav-links a:hover {
-    background-color: #666
-}
-
-
-
-.image-of-me img {
-    width: 20%;
-    height: 20%;
-    border-radius: 50%;
-    border: 5px solid #8a8a8a;
-    margin-bottom: 20px;
-    
-    /* Moves the oval lower down without altering its shape */
-    transform: translateY(60px); 
-}
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Raleway:wght@400;600&family=Source+Sans+3:wght@400;600&display=swap');
 
 * {
   box-sizing: border-box;
 }
-
-
-.navbar {
-  width: 100%;
-  background-color: #333;
-  padding: 10px 0;
-  text-align: center;
-}
-
-
-.container {
-  width: 100%;
-  border: 2px solid #000;
-  background-color: #999;
-  padding: 20px;
-  text-align: center;
-}
-
-
 
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100vh;
+}
+
+body {
   display: flex;
   flex-direction: column;
+  font-family: 'Source Sans 3', sans-serif;
+  text-align: center;
+  background-color: #aaa;
+  border: 5px solid #333;
 }
 
-* {
-  box-sizing: border-box;
+h1, h2 {
+  font-family: 'Merriweather', serif;
+  color: #000;
 }
 
-
+/*
+NAVIGATION BAR
+*/
 .navbar {
   width: 100%;
-  background-color: #333;
-  padding: 10px 0;
-  text-align: center;
+  background-color: #062f47;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
 }
 
+.nav-links {
+  display: flex;
+  gap: 60px;
+}
 
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: #444;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: #666;
+}
+
+/*
+PROFILE / AVATAR
+*/
+.image-of-me img {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  border: 5px solid #062f47;
+  margin-bottom: 20px;
+  transform: translateY(60px);
+}
+
+/*
+MAIN CONTAINER & LAYOUT
+*/
 .container {
   width: 100%;
   flex: 1;
+  background-color: #999;
   border: 2px solid #000;
-  background-color: #999;
   padding: 20px;
   text-align: center;
 }
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: #aaa;
-  border: 5px solid #333;
+
+.container.red {
+  background-color: #f44336;
 }
 
-.container {
-  width: 100%;
-  flex: 1; /* Pushes the background all the way to the bottom border */
-  background-color: #999;
-  padding: 20px;
-  text-align: center;
-}
-/* Container Background */
-.red {
-  background: #f44336;
-}
-
-/* Base Link Styling */
+/*
+CONTAINER LINKS & HOVER ANIMATIONS
+ */
 div.container a {
-  color: #FFF;
-  text-decoration: none;
-  font: 20px Raleway;
-  margin: 0px 10px;
-  padding: 10px 10px;
   position: relative;
   z-index: 0;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
   cursor: pointer;
 }
 
-/* Top and Bottom Border Outward Animation */
+/* Animated Top/Bottom Borders */
 div.topBotomBordersOut a:before,
 div.topBotomBordersOut a:after {
   position: absolute;
-  left: 0px;
+  left: 0;
   width: 100%;
   height: 2px;
   background: #fff;
   content: "";
   opacity: 0;
-  transition: all 0.3s opacity, transform 0.3s;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 div.topBotomBordersOut a:before {
-  top: 0px;
+  top: 0;
   transform: translateY(10px);
 }
 
 div.topBotomBordersOut a:after {
-  bottom: 0px;
+  bottom: 0;
   transform: translateY(-10px);
 }
 
-/* Hover State */
 div.topBotomBordersOut a:hover:before,
 div.topBotomBordersOut a:hover:after {
   opacity: 1;
-  transform: translateY(0px);
-}
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:wght@400;600&display=swap');
-
-body {
-  font-family: 'Source Sans 3', sans-serif;
-}
-
-h1, h2 {
-  font-family: 'Merriweather', serif;
+  transform: translateY(0);
 }
