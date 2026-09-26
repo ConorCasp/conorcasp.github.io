@@ -16,13 +16,13 @@ body {
   flex-direction: column;
   font-family: 'Source Sans 3', sans-serif;
   text-align: center;
-  background-color: #aaa;
-  border: 5px solid #333;
+  background: linear-gradient(135deg, #f4f1ec 0%, #e5edf0 100%);
+  color: #263238;
 }
 
 h1, h2 {
   font-family: 'Merriweather', serif;
-  color: #000;
+  color: #062f47;
 }
 
 /*
@@ -33,38 +33,73 @@ NAVIGATION BAR
   background-color: #062f47;
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 14px rgba(6, 47, 71, 0.2);
 }
 
 .nav-links {
   display: flex;
-  gap: 60px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
   font-size: 17px;
-  background-color: #444;
+  background-color: transparent;
   padding: 10px 25px;
-  border-radius: 25px;
-  transition: background-color 0.2s ease;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-links a:hover {
-  background-color: #666;
+  background-color: #174f6b;
+  transform: translateY(-2px);
 }
 
 /*
 PROFILE / AVATAR
 */
 .image-of-me img {
-  width: 20%;
-  height: 20%;
-  border-radius: 50%;
+  display: block;
+  width: min(260px, 75vw);
+  height: auto;
+  border-radius: 0;
   border: 5px solid #062f47;
-  margin-bottom: 20px;
-  transform: translateY(60px);
+  margin: 18px auto 0;
+  box-shadow: 12px 12px 0 rgba(6, 47, 71, 0.15);
+}
+
+.image-of-me {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 30px 24px 55px;
+}
+
+.image-of-me h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.image-of-me h1::after {
+  display: block;
+  width: 55px;
+  height: 4px;
+  margin: 14px auto 0;
+  background: #d97745;
+  content: '';
+}
+
+.image-of-me h3 {
+  max-width: 650px;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #43545c;
 }
 
 /*
@@ -72,10 +107,8 @@ MAIN CONTAINER & LAYOUT
 */
 .container {
   width: 100%;
-  flex: 1;
-  background-color: #999;
-  border: 2px solid #000;
-  padding: 20px;
+  background-color: transparent;
+  padding: 0;
   text-align: center;
 }
 
@@ -125,4 +158,20 @@ div.topBotomBordersOut a:hover:before,
 div.topBotomBordersOut a:hover:after {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  div.container a {
+    margin: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  .image-of-me {
+    padding: 25px 18px 40px;
+  }
 }
