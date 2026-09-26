@@ -20,6 +20,14 @@
     <h1>Future Work</h1>
 
     <div class="project">
+        <h2>My Goals</h2>
+        <p>
+            Here I will talk about my future goals and what I hope
+            to accomplish in my career.
+        </p>
+    </div>
+
+    <div class="project">
         <h2>Future Projects</h2>
         <p>
             Here I will describe projects and technologies that I
@@ -27,6 +35,13 @@
         </p>
     </div>
 
+    <div class="project">
+        <h2>Career</h2>
+        <p>
+            I plan to continue developing my software engineering
+            skills and gain experience in the technology industry.
+        </p>
+    </div>
 
 </div>
 
